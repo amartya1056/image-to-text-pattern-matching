@@ -1,0 +1,73 @@
+{
+  "keywords": [
+    "invoice",
+    "receipt",
+    "total",
+    "payment",
+    "refund",
+    "discount",
+    "customer",
+    "address",
+    "signature",
+    "confidential",
+    "urgent",
+    "deadline",
+    "approved",
+    "warning",
+    "password",
+    "verification"
+  ],
+  "phrases": [
+    "tax invoice",
+    "grand total",
+    "due date",
+    "account number",
+    "bank transfer",
+    "terms and conditions",
+    "non-disclosure agreement",
+    "date of birth",
+    "limited offer",
+    "thank you"
+  ],
+  "patterns": {
+    "email": {
+      "regex": "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)*\\.[A-Za-z]{2,}",
+      "description": "E-mail address"
+    },
+    "url": {
+      "regex": "(?:https?://|www\\.)[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)+(?:/(?:[A-Za-z0-9._~%/?=&#-]*[A-Za-z0-9_~%/?=&#-])?)?",
+      "description": "Web address starting with http(s):// or www."
+    },
+    "phone": {
+      "regex": "(?<![\\w+])(?:\\+91[\\s-]?)?[6-9]\\d{4}[\\s-]?\\d{5}(?!\\w)|\\(0\\d{2,4}\\)\\s?\\d{3,4}[\\s-]?\\d{4}(?!\\w)",
+      "description": "Indian mobile number (+91 98765 43210) or landline ((011) 2345 6789)"
+    },
+    "date": {
+      "regex": "\\b(?:\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4}|\\d{4}-\\d{2}-\\d{2}|\\d{1,2}\\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\\.?,?\\s+\\d{4})\\b",
+      "description": "Dates such as 14/03/2026, 2026-03-14 or 14 March 2026"
+    },
+    "invoice_number": {
+      "regex": "\\b(?:INV|BILL|RCPT)[-/]?\\d{3,}(?:[-/]\\d+)*\\b",
+      "description": "Document numbers such as INV-2026-0147 or RCPT-88213"
+    },
+    "amount": {
+      "regex": "(?:Rs\\.?|INR|USD|\\$)\\s?\\d{1,3}(?:,\\d{2,3})*(?:\\.\\d{2})?",
+      "description": "Currency amounts such as Rs. 1,250.00, INR 4,500 or $49.99"
+    },
+    "gstin": {
+      "regex": "\\b\\d{2}[A-Z]{5}\\d{4}[A-Z][1-9A-Z]Z[0-9A-Z]\\b",
+      "description": "Indian GST identification number (15 characters)"
+    },
+    "percentage": {
+      "regex": "\\b\\d{1,3}(?:\\.\\d+)?\\s?%",
+      "description": "Percentages such as 18% or 12.5 %"
+    }
+  },
+  "settings": {
+    "fuzzy_threshold": 90,
+    "min_fuzzy_length": 4,
+    "min_word_confidence": 0,
+    "low_confidence_threshold": 60,
+    "min_text_coverage": 0.5
+  }
+}

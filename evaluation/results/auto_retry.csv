@@ -1,0 +1,11 @@
+image,mean_conf,coverage,retried,char_acc
+01_printed_document.png,95.7,1.0,False,1.0
+02_invoice.png,95.19,0.7232,False,1.0
+03_receipt.jpeg,85.08,0.946,False,0.9839
+04_screenshot_email.png,95.19,0.5633,False,0.9752
+05_poster_sign.png,93.52,0.8744,False,0.9935
+06_skewed_scan.png,92.3,0.6028,False,1.0
+07_low_quality_scan.jpg,86.39,0.8611,False,0.8374
+08_low_contrast_notice.tiff,87.05,0.9249,True,0.9718
+09_id_card.bmp,93.0,0.7416,False,0.9833
+10_small_font_form.png,94.36,0.9892,False,0.8354

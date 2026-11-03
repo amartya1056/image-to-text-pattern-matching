@@ -1,0 +1,8 @@
+config,tp,fp,fn,precision,recall,f1
+Tesseract - no preprocessing,45,3,9,0.9375,0.8333,0.8824
+Tesseract - grayscale + deskew,48,2,6,0.96,0.8889,0.9231
+Tesseract - full + Otsu,33,8,21,0.8049,0.6111,0.6947
+Tesseract - full + adaptive,40,5,14,0.8889,0.7407,0.8081
+Proposed pipeline (Tesseract),50,2,4,0.9615,0.9259,0.9434
+EasyOCR - no preprocessing,34,9,20,0.7907,0.6296,0.701
+EasyOCR - grayscale + deskew,35,9,19,0.7955,0.6481,0.7143

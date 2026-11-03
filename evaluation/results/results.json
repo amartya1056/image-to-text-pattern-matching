@@ -1,0 +1,1213 @@
+{
+  "images": 10,
+  "proposed_config": "Proposed pipeline (Tesseract)",
+  "ocr_summary": [
+    {
+      "config": "Tesseract - no preprocessing",
+      "char_accuracy": 0.8648,
+      "char_accuracy_before_cleaning": 0.8642,
+      "word_accuracy": 0.8232,
+      "mean_confidence": 90.596,
+      "time_per_image_s": 0.3062,
+      "ocr_time_per_image_s": 0.2998,
+      "exact_keyword_f1": 0.9905
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "char_accuracy": 0.8919,
+      "char_accuracy_before_cleaning": 0.891,
+      "word_accuracy": 0.8623,
+      "mean_confidence": 91.837,
+      "time_per_image_s": 0.3271,
+      "ocr_time_per_image_s": 0.2588,
+      "exact_keyword_f1": 0.9905
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "char_accuracy": 0.8789,
+      "char_accuracy_before_cleaning": 0.8792,
+      "word_accuracy": 0.7096,
+      "mean_confidence": 84.711,
+      "time_per_image_s": 0.3142,
+      "ocr_time_per_image_s": 0.2442,
+      "exact_keyword_f1": 0.9505
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "char_accuracy": 0.9263,
+      "char_accuracy_before_cleaning": 0.927,
+      "word_accuracy": 0.7713,
+      "mean_confidence": 82.695,
+      "time_per_image_s": 0.3291,
+      "ocr_time_per_image_s": 0.2528,
+      "exact_keyword_f1": 0.9709
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "char_accuracy": 0.958,
+      "char_accuracy_before_cleaning": 0.9531,
+      "word_accuracy": 0.9373,
+      "mean_confidence": 91.778,
+      "time_per_image_s": 0.3759,
+      "ocr_time_per_image_s": 0.292,
+      "exact_keyword_f1": 0.9905
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "char_accuracy": 0.8848,
+      "char_accuracy_before_cleaning": 0.8839,
+      "word_accuracy": 0.7132,
+      "mean_confidence": 76.253,
+      "time_per_image_s": 2.9241,
+      "ocr_time_per_image_s": 2.9141,
+      "exact_keyword_f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "char_accuracy": 0.9387,
+      "char_accuracy_before_cleaning": 0.9381,
+      "word_accuracy": 0.7824,
+      "mean_confidence": 75.209,
+      "time_per_image_s": 3.1884,
+      "ocr_time_per_image_s": 3.0993,
+      "exact_keyword_f1": 0.9608
+    }
+  ],
+  "matching_modes": [
+    {
+      "config": "Tesseract - no preprocessing",
+      "mode": "Exact only",
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "mode": "Fuzzy only",
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "mode": "Exact + fuzzy",
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "mode": "Exact only",
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "mode": "Fuzzy only",
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "mode": "Exact + fuzzy",
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "mode": "Exact only",
+      "tp": 48,
+      "fp": 0,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.9057,
+      "f1": 0.9505
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "mode": "Fuzzy only",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "mode": "Exact + fuzzy",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "mode": "Exact only",
+      "tp": 50,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9434,
+      "f1": 0.9709
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "mode": "Fuzzy only",
+      "tp": 50,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9434,
+      "f1": 0.9709
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "mode": "Exact + fuzzy",
+      "tp": 50,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9434,
+      "f1": 0.9709
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "mode": "Exact only",
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "mode": "Fuzzy only",
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "mode": "Exact + fuzzy",
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "mode": "Exact only",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "mode": "Fuzzy only",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "mode": "Exact + fuzzy",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "mode": "Exact only",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "mode": "Fuzzy only",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "mode": "Exact + fuzzy",
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    }
+  ],
+  "regex_extraction": [
+    {
+      "config": "Tesseract - no preprocessing",
+      "tp": 45,
+      "fp": 3,
+      "fn": 9,
+      "precision": 0.9375,
+      "recall": 0.8333,
+      "f1": 0.8824
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "tp": 48,
+      "fp": 2,
+      "fn": 6,
+      "precision": 0.96,
+      "recall": 0.8889,
+      "f1": 0.9231
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "tp": 33,
+      "fp": 8,
+      "fn": 21,
+      "precision": 0.8049,
+      "recall": 0.6111,
+      "f1": 0.6947
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "tp": 40,
+      "fp": 5,
+      "fn": 14,
+      "precision": 0.8889,
+      "recall": 0.7407,
+      "f1": 0.8081
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "tp": 50,
+      "fp": 2,
+      "fn": 4,
+      "precision": 0.9615,
+      "recall": 0.9259,
+      "f1": 0.9434
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "tp": 34,
+      "fp": 9,
+      "fn": 20,
+      "precision": 0.7907,
+      "recall": 0.6296,
+      "f1": 0.701
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "tp": 35,
+      "fp": 9,
+      "fn": 19,
+      "precision": 0.7955,
+      "recall": 0.6481,
+      "f1": 0.7143
+    }
+  ],
+  "regex_per_pattern": [
+    {
+      "pattern": "email",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "pattern": "url",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "pattern": "phone",
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "pattern": "date",
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "pattern": "invoice_number",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "pattern": "amount",
+      "tp": 14,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.9333,
+      "recall": 0.8235,
+      "f1": 0.875
+    },
+    {
+      "pattern": "gstin",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "pattern": "percentage",
+      "tp": 2,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.6667,
+      "recall": 0.6667,
+      "f1": 0.6667
+    }
+  ],
+  "cleaning_ablation": [
+    {
+      "cleaning": "off",
+      "char_accuracy": 0.9531,
+      "keyword_f1": 1.0,
+      "pattern_f1": 0.9333
+    },
+    {
+      "cleaning": "on",
+      "char_accuracy": 0.9581,
+      "keyword_f1": 1.0,
+      "pattern_f1": 0.9434
+    }
+  ],
+  "fuzzy_threshold_sweep": [
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 50,
+      "tp": 53,
+      "fp": 56,
+      "fn": 0,
+      "precision": 0.4862,
+      "recall": 1.0,
+      "f1": 0.6543
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 55,
+      "tp": 53,
+      "fp": 29,
+      "fn": 0,
+      "precision": 0.6463,
+      "recall": 1.0,
+      "f1": 0.7852
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 60,
+      "tp": 53,
+      "fp": 22,
+      "fn": 0,
+      "precision": 0.7067,
+      "recall": 1.0,
+      "f1": 0.8281
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 65,
+      "tp": 53,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.8833,
+      "recall": 1.0,
+      "f1": 0.9381
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 70,
+      "tp": 53,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.8983,
+      "recall": 1.0,
+      "f1": 0.9464
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 75,
+      "tp": 53,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.8983,
+      "recall": 1.0,
+      "f1": 0.9464
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 80,
+      "tp": 53,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.9298,
+      "recall": 1.0,
+      "f1": 0.9636
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 85,
+      "tp": 53,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.9464,
+      "recall": 1.0,
+      "f1": 0.9725
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 90,
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 95,
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Tesseract - no preprocessing",
+      "threshold": 100,
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 50,
+      "tp": 53,
+      "fp": 55,
+      "fn": 0,
+      "precision": 0.4907,
+      "recall": 1.0,
+      "f1": 0.6584
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 55,
+      "tp": 53,
+      "fp": 29,
+      "fn": 0,
+      "precision": 0.6463,
+      "recall": 1.0,
+      "f1": 0.7852
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 60,
+      "tp": 53,
+      "fp": 22,
+      "fn": 0,
+      "precision": 0.7067,
+      "recall": 1.0,
+      "f1": 0.8281
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 65,
+      "tp": 53,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.8833,
+      "recall": 1.0,
+      "f1": 0.9381
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 70,
+      "tp": 53,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.8983,
+      "recall": 1.0,
+      "f1": 0.9464
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 75,
+      "tp": 53,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.8983,
+      "recall": 1.0,
+      "f1": 0.9464
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 80,
+      "tp": 53,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.9298,
+      "recall": 1.0,
+      "f1": 0.9636
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 85,
+      "tp": 53,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.9464,
+      "recall": 1.0,
+      "f1": 0.9725
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 90,
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 95,
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Tesseract - grayscale + deskew",
+      "threshold": 100,
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 50,
+      "tp": 52,
+      "fp": 54,
+      "fn": 1,
+      "precision": 0.4906,
+      "recall": 0.9811,
+      "f1": 0.6541
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 55,
+      "tp": 52,
+      "fp": 26,
+      "fn": 1,
+      "precision": 0.6667,
+      "recall": 0.9811,
+      "f1": 0.7939
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 60,
+      "tp": 52,
+      "fp": 16,
+      "fn": 1,
+      "precision": 0.7647,
+      "recall": 0.9811,
+      "f1": 0.8595
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 65,
+      "tp": 52,
+      "fp": 6,
+      "fn": 1,
+      "precision": 0.8966,
+      "recall": 0.9811,
+      "f1": 0.9369
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 70,
+      "tp": 52,
+      "fp": 5,
+      "fn": 1,
+      "precision": 0.9123,
+      "recall": 0.9811,
+      "f1": 0.9455
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 75,
+      "tp": 52,
+      "fp": 4,
+      "fn": 1,
+      "precision": 0.9286,
+      "recall": 0.9811,
+      "f1": 0.9541
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 80,
+      "tp": 50,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.9804,
+      "recall": 0.9434,
+      "f1": 0.9615
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 85,
+      "tp": 50,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.9804,
+      "recall": 0.9434,
+      "f1": 0.9615
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 90,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 95,
+      "tp": 48,
+      "fp": 0,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.9057,
+      "f1": 0.9505
+    },
+    {
+      "config": "Tesseract - full + Otsu",
+      "threshold": 100,
+      "tp": 48,
+      "fp": 0,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.9057,
+      "f1": 0.9505
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 50,
+      "tp": 53,
+      "fp": 55,
+      "fn": 0,
+      "precision": 0.4907,
+      "recall": 1.0,
+      "f1": 0.6584
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 55,
+      "tp": 53,
+      "fp": 30,
+      "fn": 0,
+      "precision": 0.6386,
+      "recall": 1.0,
+      "f1": 0.7794
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 60,
+      "tp": 53,
+      "fp": 22,
+      "fn": 0,
+      "precision": 0.7067,
+      "recall": 1.0,
+      "f1": 0.8281
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 65,
+      "tp": 53,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.8833,
+      "recall": 1.0,
+      "f1": 0.9381
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 70,
+      "tp": 53,
+      "fp": 5,
+      "fn": 0,
+      "precision": 0.9138,
+      "recall": 1.0,
+      "f1": 0.955
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 75,
+      "tp": 52,
+      "fp": 5,
+      "fn": 1,
+      "precision": 0.9123,
+      "recall": 0.9811,
+      "f1": 0.9455
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 80,
+      "tp": 51,
+      "fp": 3,
+      "fn": 2,
+      "precision": 0.9444,
+      "recall": 0.9623,
+      "f1": 0.9533
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 85,
+      "tp": 51,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.9623,
+      "recall": 0.9623,
+      "f1": 0.9623
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 90,
+      "tp": 50,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9434,
+      "f1": 0.9709
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 95,
+      "tp": 50,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9434,
+      "f1": 0.9709
+    },
+    {
+      "config": "Tesseract - full + adaptive",
+      "threshold": 100,
+      "tp": 50,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9434,
+      "f1": 0.9709
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 50,
+      "tp": 53,
+      "fp": 58,
+      "fn": 0,
+      "precision": 0.4775,
+      "recall": 1.0,
+      "f1": 0.6463
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 55,
+      "tp": 53,
+      "fp": 30,
+      "fn": 0,
+      "precision": 0.6386,
+      "recall": 1.0,
+      "f1": 0.7794
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 60,
+      "tp": 53,
+      "fp": 22,
+      "fn": 0,
+      "precision": 0.7067,
+      "recall": 1.0,
+      "f1": 0.8281
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 65,
+      "tp": 53,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.8833,
+      "recall": 1.0,
+      "f1": 0.9381
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 70,
+      "tp": 53,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.8983,
+      "recall": 1.0,
+      "f1": 0.9464
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 75,
+      "tp": 53,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.8983,
+      "recall": 1.0,
+      "f1": 0.9464
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 80,
+      "tp": 53,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.9298,
+      "recall": 1.0,
+      "f1": 0.9636
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 85,
+      "tp": 53,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.9464,
+      "recall": 1.0,
+      "f1": 0.9725
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 90,
+      "tp": 53,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 95,
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "Proposed pipeline (Tesseract)",
+      "threshold": 100,
+      "tp": 52,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9811,
+      "f1": 0.9905
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 50,
+      "tp": 53,
+      "fp": 57,
+      "fn": 0,
+      "precision": 0.4818,
+      "recall": 1.0,
+      "f1": 0.6503
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 55,
+      "tp": 53,
+      "fp": 29,
+      "fn": 0,
+      "precision": 0.6463,
+      "recall": 1.0,
+      "f1": 0.7852
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 60,
+      "tp": 52,
+      "fp": 20,
+      "fn": 1,
+      "precision": 0.7222,
+      "recall": 0.9811,
+      "f1": 0.832
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 65,
+      "tp": 52,
+      "fp": 7,
+      "fn": 1,
+      "precision": 0.8814,
+      "recall": 0.9811,
+      "f1": 0.9286
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 70,
+      "tp": 51,
+      "fp": 6,
+      "fn": 2,
+      "precision": 0.8947,
+      "recall": 0.9623,
+      "f1": 0.9273
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 75,
+      "tp": 50,
+      "fp": 6,
+      "fn": 3,
+      "precision": 0.8929,
+      "recall": 0.9434,
+      "f1": 0.9174
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 80,
+      "tp": 50,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.9259,
+      "recall": 0.9434,
+      "f1": 0.9346
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 85,
+      "tp": 49,
+      "fp": 3,
+      "fn": 4,
+      "precision": 0.9423,
+      "recall": 0.9245,
+      "f1": 0.9333
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 90,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 95,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - no preprocessing",
+      "threshold": 100,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 50,
+      "tp": 53,
+      "fp": 57,
+      "fn": 0,
+      "precision": 0.4818,
+      "recall": 1.0,
+      "f1": 0.6503
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 55,
+      "tp": 53,
+      "fp": 29,
+      "fn": 0,
+      "precision": 0.6463,
+      "recall": 1.0,
+      "f1": 0.7852
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 60,
+      "tp": 52,
+      "fp": 20,
+      "fn": 1,
+      "precision": 0.7222,
+      "recall": 0.9811,
+      "f1": 0.832
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 65,
+      "tp": 52,
+      "fp": 7,
+      "fn": 1,
+      "precision": 0.8814,
+      "recall": 0.9811,
+      "f1": 0.9286
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 70,
+      "tp": 51,
+      "fp": 6,
+      "fn": 2,
+      "precision": 0.8947,
+      "recall": 0.9623,
+      "f1": 0.9273
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 75,
+      "tp": 50,
+      "fp": 6,
+      "fn": 3,
+      "precision": 0.8929,
+      "recall": 0.9434,
+      "f1": 0.9174
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 80,
+      "tp": 50,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.9259,
+      "recall": 0.9434,
+      "f1": 0.9346
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 85,
+      "tp": 49,
+      "fp": 3,
+      "fn": 4,
+      "precision": 0.9423,
+      "recall": 0.9245,
+      "f1": 0.9333
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 90,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 95,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    },
+    {
+      "config": "EasyOCR - grayscale + deskew",
+      "threshold": 100,
+      "tp": 49,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9245,
+      "f1": 0.9608
+    }
+  ]
+}

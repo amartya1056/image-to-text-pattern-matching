@@ -1,0 +1,22 @@
+config,mode,tp,fp,fn,precision,recall,f1
+Tesseract - no preprocessing,Exact only,52,0,1,1.0,0.9811,0.9905
+Tesseract - no preprocessing,Fuzzy only,53,0,0,1.0,1.0,1.0
+Tesseract - no preprocessing,Exact + fuzzy,53,0,0,1.0,1.0,1.0
+Tesseract - grayscale + deskew,Exact only,52,0,1,1.0,0.9811,0.9905
+Tesseract - grayscale + deskew,Fuzzy only,53,0,0,1.0,1.0,1.0
+Tesseract - grayscale + deskew,Exact + fuzzy,53,0,0,1.0,1.0,1.0
+Tesseract - full + Otsu,Exact only,48,0,5,1.0,0.9057,0.9505
+Tesseract - full + Otsu,Fuzzy only,49,0,4,1.0,0.9245,0.9608
+Tesseract - full + Otsu,Exact + fuzzy,49,0,4,1.0,0.9245,0.9608
+Tesseract - full + adaptive,Exact only,50,0,3,1.0,0.9434,0.9709
+Tesseract - full + adaptive,Fuzzy only,50,0,3,1.0,0.9434,0.9709
+Tesseract - full + adaptive,Exact + fuzzy,50,0,3,1.0,0.9434,0.9709
+Proposed pipeline (Tesseract),Exact only,52,0,1,1.0,0.9811,0.9905
+Proposed pipeline (Tesseract),Fuzzy only,53,0,0,1.0,1.0,1.0
+Proposed pipeline (Tesseract),Exact + fuzzy,53,0,0,1.0,1.0,1.0
+EasyOCR - no preprocessing,Exact only,49,0,4,1.0,0.9245,0.9608
+EasyOCR - no preprocessing,Fuzzy only,49,0,4,1.0,0.9245,0.9608
+EasyOCR - no preprocessing,Exact + fuzzy,49,0,4,1.0,0.9245,0.9608
+EasyOCR - grayscale + deskew,Exact only,49,0,4,1.0,0.9245,0.9608
+EasyOCR - grayscale + deskew,Fuzzy only,49,0,4,1.0,0.9245,0.9608
+EasyOCR - grayscale + deskew,Exact + fuzzy,49,0,4,1.0,0.9245,0.9608

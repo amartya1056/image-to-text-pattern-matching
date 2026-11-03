@@ -1,0 +1,7 @@
+# Optional second OCR engine for local comparison (pulls in PyTorch, ~1 GB).
+# Not installed on the free cloud deployment because of its memory limit.
+-r requirements.txt
+easyocr>=1.7
+
+# Only needed to re-capture the report screenshots (scripts/capture_screenshots.py)
+# playwright>=1.40

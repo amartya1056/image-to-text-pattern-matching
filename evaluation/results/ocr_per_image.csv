@@ -1,0 +1,71 @@
+config,engine,image,category,char_acc_raw,char_acc,word_acc,mean_conf,coverage,retried,time_s,ocr_time_s,words,kw_tp,kw_fp,kw_fn
+Tesseract - no preprocessing,tesseract,01_printed_document.png,printed document,1.0,1.0,1.0,95.7,1.0,False,0.4267,0.4148,110,9,0,0
+Tesseract - no preprocessing,tesseract,02_invoice.png,invoice,1.0,1.0,1.0,95.18,0.7232,False,0.3743,0.3632,79,10,0,0
+Tesseract - no preprocessing,tesseract,03_receipt.jpeg,receipt,0.9775,0.9839,0.9,85.31,0.946,False,0.3094,0.3053,51,6,0,0
+Tesseract - no preprocessing,tesseract,04_screenshot_email.png,screenshot,0.9752,0.9752,0.9667,95.21,0.5633,False,0.2856,0.2799,58,7,0,0
+Tesseract - no preprocessing,tesseract,05_poster_sign.png,poster / sign,0.9935,0.9935,0.9565,88.04,0.9331,False,0.2674,0.2611,23,1,0,0
+Tesseract - no preprocessing,tesseract,06_skewed_scan.png,skewed scan,0.7539,0.7539,0.6346,85.3,0.8579,False,0.4251,0.4159,56,4,0,0
+Tesseract - no preprocessing,tesseract,07_low_quality_scan.jpg,low-quality scan,0.8374,0.8374,0.75,86.39,0.8611,False,0.1977,0.1946,28,6,0,1
+Tesseract - no preprocessing,tesseract,08_low_contrast_notice.tiff,low-contrast photo,0.2823,0.2823,0.2,86.8,0.4206,False,0.266,0.2618,10,2,0,0
+Tesseract - no preprocessing,tesseract,09_id_card.bmp,ID card,0.9867,0.9867,0.9744,93.67,0.7412,False,0.2649,0.2613,40,3,0,0
+Tesseract - no preprocessing,tesseract,10_small_font_form.png,small-font form,0.8354,0.8354,0.85,94.36,0.9892,False,0.2448,0.2398,61,4,0,0
+Tesseract - grayscale + deskew,tesseract,01_printed_document.png,printed document,1.0,1.0,1.0,95.7,1.0,False,0.4487,0.3669,110,9,0,0
+Tesseract - grayscale + deskew,tesseract,02_invoice.png,invoice,1.0,1.0,1.0,95.19,0.7232,False,0.4157,0.3294,79,10,0,0
+Tesseract - grayscale + deskew,tesseract,03_receipt.jpeg,receipt,0.9775,0.9839,0.9,85.08,0.946,False,0.3011,0.2482,51,6,0,0
+Tesseract - grayscale + deskew,tesseract,04_screenshot_email.png,screenshot,0.9752,0.9752,0.9667,95.19,0.5633,False,0.3057,0.247,58,7,0,0
+Tesseract - grayscale + deskew,tesseract,05_poster_sign.png,poster / sign,0.9935,0.9935,0.9565,93.52,0.8744,False,0.3354,0.2663,23,1,0,0
+Tesseract - grayscale + deskew,tesseract,06_skewed_scan.png,skewed scan,0.9974,1.0,1.0,92.3,0.6028,False,0.3906,0.3036,52,4,0,0
+Tesseract - grayscale + deskew,tesseract,07_low_quality_scan.jpg,low-quality scan,0.8374,0.8374,0.75,86.39,0.8611,False,0.241,0.1747,28,6,0,1
+Tesseract - grayscale + deskew,tesseract,08_low_contrast_notice.tiff,low-contrast photo,0.3105,0.3105,0.225,87.64,0.4429,False,0.2525,0.1929,11,2,0,0
+Tesseract - grayscale + deskew,tesseract,09_id_card.bmp,ID card,0.9833,0.9833,0.9744,93.0,0.7416,False,0.3021,0.2438,40,3,0,0
+Tesseract - grayscale + deskew,tesseract,10_small_font_form.png,small-font form,0.8354,0.8354,0.85,94.36,0.9892,False,0.2779,0.2148,61,4,0,0
+Tesseract - full + Otsu,tesseract,01_printed_document.png,printed document,0.9867,0.9907,0.9182,90.16,1.0,False,0.4541,0.3753,113,9,0,0
+Tesseract - full + Otsu,tesseract,02_invoice.png,invoice,0.9943,0.9943,0.962,93.01,0.6831,False,0.3953,0.3149,81,10,0,0
+Tesseract - full + Otsu,tesseract,03_receipt.jpeg,receipt,0.9678,0.9614,0.76,80.5,0.9564,False,0.2826,0.2294,51,6,0,0
+Tesseract - full + Otsu,tesseract,04_screenshot_email.png,screenshot,0.8626,0.8626,0.5,81.4,0.4801,False,0.2952,0.2361,65,6,0,1
+Tesseract - full + Otsu,tesseract,05_poster_sign.png,poster / sign,0.9935,0.9935,0.9565,93.0,0.8623,False,0.2951,0.2266,23,1,0,0
+Tesseract - full + Otsu,tesseract,06_skewed_scan.png,skewed scan,1.0,1.0,1.0,95.54,0.3438,False,0.3461,0.2629,52,4,0,0
+Tesseract - full + Otsu,tesseract,07_low_quality_scan.jpg,low-quality scan,0.7967,0.7967,0.375,66.93,0.9184,False,0.2573,0.1766,30,3,0,4
+Tesseract - full + Otsu,tesseract,08_low_contrast_notice.tiff,low-contrast photo,0.3347,0.3347,0.2,82.46,0.3408,False,0.2405,0.1697,13,2,0,0
+Tesseract - full + Otsu,tesseract,09_id_card.bmp,ID card,0.98,0.98,0.9744,95.03,0.7065,False,0.3042,0.2408,40,3,0,0
+Tesseract - full + Otsu,tesseract,10_small_font_form.png,small-font form,0.8753,0.8753,0.45,69.08,0.986,False,0.2715,0.2097,65,4,0,0
+Tesseract - full + adaptive,tesseract,01_printed_document.png,printed document,0.996,0.996,0.9818,94.55,1.0,False,0.4573,0.3677,110,9,0,0
+Tesseract - full + adaptive,tesseract,02_invoice.png,invoice,0.981,0.981,0.962,93.65,0.6849,False,0.4201,0.3348,77,9,0,1
+Tesseract - full + adaptive,tesseract,03_receipt.jpeg,receipt,0.9807,0.9743,0.84,86.71,0.9594,False,0.2971,0.231,50,6,0,0
+Tesseract - full + adaptive,tesseract,04_screenshot_email.png,screenshot,0.8401,0.8401,0.8,94.07,0.539,False,0.3099,0.2441,55,7,0,0
+Tesseract - full + adaptive,tesseract,05_poster_sign.png,poster / sign,0.7032,0.7032,0.0,26.5,0.8794,False,0.3125,0.2278,10,0,0,1
+Tesseract - full + adaptive,tesseract,06_skewed_scan.png,skewed scan,1.0,1.0,1.0,95.15,0.5704,False,0.3985,0.3009,52,4,0,0
+Tesseract - full + adaptive,tesseract,07_low_quality_scan.jpg,low-quality scan,0.9309,0.9309,0.625,66.75,1.0,False,0.2502,0.1749,32,6,0,1
+Tesseract - full + adaptive,tesseract,08_low_contrast_notice.tiff,low-contrast photo,0.996,0.996,0.975,93.62,1.0,False,0.2683,0.1992,40,2,0,0
+Tesseract - full + adaptive,tesseract,09_id_card.bmp,ID card,0.8967,0.8967,0.8462,92.36,0.501,False,0.2795,0.218,36,3,0,0
+Tesseract - full + adaptive,tesseract,10_small_font_form.png,small-font form,0.9451,0.9451,0.6833,83.59,0.9896,False,0.2977,0.2299,65,4,0,0
+Proposed pipeline (Tesseract),tesseract,01_printed_document.png,printed document,1.0,1.0,1.0,95.7,1.0,False,0.4493,0.3678,110,9,0,0
+Proposed pipeline (Tesseract),tesseract,02_invoice.png,invoice,1.0,1.0,1.0,95.19,0.7232,False,0.4079,0.3254,79,10,0,0
+Proposed pipeline (Tesseract),tesseract,03_receipt.jpeg,receipt,0.9775,0.9839,0.9,85.08,0.946,False,0.3137,0.2553,51,6,0,0
+Proposed pipeline (Tesseract),tesseract,04_screenshot_email.png,screenshot,0.9752,0.9752,0.9667,95.19,0.5633,False,0.3311,0.2659,58,7,0,0
+Proposed pipeline (Tesseract),tesseract,05_poster_sign.png,poster / sign,0.9935,0.9935,0.9565,93.52,0.8744,False,0.3108,0.2378,23,1,0,0
+Proposed pipeline (Tesseract),tesseract,06_skewed_scan.png,skewed scan,0.9974,1.0,1.0,92.3,0.6028,False,0.4007,0.3139,52,4,0,0
+Proposed pipeline (Tesseract),tesseract,07_low_quality_scan.jpg,low-quality scan,0.8374,0.8374,0.75,86.39,0.8611,False,0.2508,0.1833,28,6,0,1
+Proposed pipeline (Tesseract),tesseract,08_low_contrast_notice.tiff,low-contrast photo,0.9315,0.9718,0.975,87.05,0.9249,True,0.6505,0.482,39,2,0,0
+Proposed pipeline (Tesseract),tesseract,09_id_card.bmp,ID card,0.9833,0.9833,0.9744,93.0,0.7416,False,0.3393,0.2525,40,3,0,0
+Proposed pipeline (Tesseract),tesseract,10_small_font_form.png,small-font form,0.8354,0.8354,0.85,94.36,0.9892,False,0.3046,0.2362,61,4,0,0
+EasyOCR - no preprocessing,easyocr,01_printed_document.png,printed document,0.9456,0.9456,0.8636,76.6,0.9569,False,4.8889,4.8712,114,9,0,0
+EasyOCR - no preprocessing,easyocr,02_invoice.png,invoice,0.9791,0.9772,0.8608,80.34,0.7054,False,4.7224,4.7068,79,10,0,0
+EasyOCR - no preprocessing,easyocr,03_receipt.jpeg,receipt,0.8553,0.865,0.56,86.67,0.9388,False,2.252,2.2457,53,6,0,0
+EasyOCR - no preprocessing,easyocr,04_screenshot_email.png,screenshot,0.8739,0.8761,0.7167,83.74,0.6088,False,2.6398,2.6315,61,7,0,0
+EasyOCR - no preprocessing,easyocr,05_poster_sign.png,poster / sign,0.9871,0.9871,0.913,79.37,0.8622,False,2.3784,2.3674,24,1,0,0
+EasyOCR - no preprocessing,easyocr,06_skewed_scan.png,skewed scan,0.4529,0.4555,0.25,87.25,0.8528,False,3.7831,3.7689,59,4,0,0
+EasyOCR - no preprocessing,easyocr,07_low_quality_scan.jpg,low-quality scan,0.7927,0.7886,0.1875,28.59,0.9712,False,1.6782,1.6733,34,3,0,4
+EasyOCR - no preprocessing,easyocr,08_low_contrast_notice.tiff,low-contrast photo,0.996,0.996,0.975,81.97,0.9405,False,2.2902,2.2826,40,2,0,0
+EasyOCR - no preprocessing,easyocr,09_id_card.bmp,ID card,0.9667,0.9667,0.8718,86.47,0.7496,False,1.985,1.9788,41,3,0,0
+EasyOCR - no preprocessing,easyocr,10_small_font_form.png,small-font form,0.99,0.99,0.9333,71.53,0.9604,False,2.6228,2.6145,60,4,0,0
+EasyOCR - grayscale + deskew,easyocr,01_printed_document.png,printed document,0.9456,0.9456,0.8636,76.6,0.9569,False,5.422,5.3151,114,9,0,0
+EasyOCR - grayscale + deskew,easyocr,02_invoice.png,invoice,0.9791,0.9772,0.8608,80.34,0.7094,False,5.2549,5.1476,79,10,0,0
+EasyOCR - grayscale + deskew,easyocr,03_receipt.jpeg,receipt,0.8553,0.865,0.56,87.43,0.9392,False,2.325,2.2592,53,6,0,0
+EasyOCR - grayscale + deskew,easyocr,04_screenshot_email.png,screenshot,0.8739,0.8761,0.7167,83.76,0.6191,False,2.8464,2.769,61,7,0,0
+EasyOCR - grayscale + deskew,easyocr,05_poster_sign.png,poster / sign,0.9871,0.9871,0.913,77.02,0.8621,False,2.545,2.4567,24,1,0,0
+EasyOCR - grayscale + deskew,easyocr,06_skewed_scan.png,skewed scan,0.9948,0.9948,0.9423,78.98,0.5795,False,4.6965,4.5786,53,4,0,0
+EasyOCR - grayscale + deskew,easyocr,07_low_quality_scan.jpg,low-quality scan,0.7927,0.7886,0.1875,28.59,0.9712,False,1.918,1.8175,34,3,0,4
+EasyOCR - grayscale + deskew,easyocr,08_low_contrast_notice.tiff,low-contrast photo,0.996,0.996,0.975,80.31,0.9398,False,2.3377,2.2623,40,2,0,0
+EasyOCR - grayscale + deskew,easyocr,09_id_card.bmp,ID card,0.9667,0.9667,0.8718,87.53,0.7477,False,1.9456,1.8761,41,3,0,0
+EasyOCR - grayscale + deskew,easyocr,10_small_font_form.png,small-font form,0.99,0.99,0.9333,71.53,0.9604,False,2.5925,2.5105,60,4,0,0

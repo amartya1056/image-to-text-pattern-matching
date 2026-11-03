@@ -1,0 +1,11 @@
+category,Tesseract - no preprocessing,Tesseract - grayscale + deskew,Tesseract - full + Otsu,Tesseract - full + adaptive,Proposed pipeline (Tesseract),EasyOCR - no preprocessing,EasyOCR - grayscale + deskew
+printed document,1.0,1.0,0.9907,0.996,1.0,0.9456,0.9456
+invoice,1.0,1.0,0.9943,0.981,1.0,0.9772,0.9772
+receipt,0.9839,0.9839,0.9614,0.9743,0.9839,0.865,0.865
+screenshot,0.9752,0.9752,0.8626,0.8401,0.9752,0.8761,0.8761
+poster / sign,0.9935,0.9935,0.9935,0.7032,0.9935,0.9871,0.9871
+skewed scan,0.7539,1.0,1.0,1.0,1.0,0.4555,0.9948
+low-quality scan,0.8374,0.8374,0.7967,0.9309,0.8374,0.7886,0.7886
+low-contrast photo,0.2823,0.3105,0.3347,0.996,0.9718,0.996,0.996
+ID card,0.9867,0.9833,0.98,0.8967,0.9833,0.9667,0.9667
+small-font form,0.8354,0.8354,0.8753,0.9451,0.8354,0.99,0.99

@@ -1,0 +1,3 @@
+cleaning,char_accuracy,keyword_f1,pattern_f1
+off,0.9531,1.0,0.9333
+on,0.9581,1.0,0.9434

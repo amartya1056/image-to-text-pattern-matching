@@ -1,0 +1,13 @@
+# Core pipeline (these are also what the cloud deployment installs)
+opencv-python-headless>=4.8
+numpy>=1.24
+pytesseract>=0.3.10        # needs the Tesseract binary - see README (packages.txt installs it on Streamlit Cloud)
+rapidfuzz>=3.0
+pandas>=2.0
+PyYAML>=6.0
+Pillow>=10.1
+
+# Interfaces, evaluation and tests
+streamlit>=1.40,<2
+matplotlib>=3.7
+pytest>=7.4

@@ -1,0 +1,42 @@
+{
+  "01_printed_document.png": {
+    "category": "printed document",
+    "text": "Nimbus Office Supplies Pvt. Ltd.\n42 Lake View Road, Bengaluru 560001\nDate: 14 March 2026\nSubject: Non-Disclosure Agreement for Project Falcon\nDear Ms. Priya Menon,\nThis letter confirms that the attached non-disclosure agreement must be\nsigned before any confidential material is shared with your team. Please\nread the terms and conditions carefully and return the signed copy by the\ndue date of 21/03/2026. The signature must match the one on our records.\nFor questions, write to legal@nimbus-supplies.example.com or call\n+91 98765 43210. Further details are available on our website at\nwww.nimbus-supplies.example.com/legal.\nThis matter is urgent and is marked confidential.\nThank you for your cooperation.\nYours sincerely,\nRahul Verma\nLegal Department"
+  },
+  "02_invoice.png": {
+    "category": "invoice",
+    "text": "TAX INVOICE\nNimbus Office Supplies Pvt. Ltd.\nGSTIN: 29ABCDE1234F1Z5\nInvoice No: INV-2026-0147 Date: 05/04/2026\nBill To: Arjun Traders, 18 MG Road, Pune 411001\nItem Qty Rate Amount\nA4 Paper Ream 10 Rs. 250.00 Rs. 2,500.00\nStapler Heavy Duty 2 Rs. 450.00 Rs. 900.00\nPrinter Toner 1 Rs. 3,200.00 Rs. 3,200.00\nSubtotal Rs. 6,600.00\nGST 18% Rs. 1,188.00\nGrand Total Rs. 7,788.00\nPayment by bank transfer to Account Number 50100234567891\nDue Date: 20/04/2026\nThank you for your business!\nQueries: accounts@nimbus-supplies.example.com"
+  },
+  "03_receipt.jpeg": {
+    "category": "receipt",
+    "text": "FRESHMART SUPERSTORE\nShop 12, Sector 15, Noida\nTel: (0120) 456 7890\nReceipt No: RCPT-88213\nDate: 18/04/2026 Time: 19:42\nMilk 1L x2 Rs.120.00\nBread Brown x1 Rs.45.00\nEggs (12) x1 Rs.84.00\nRice 5kg x1 Rs.399.00\nDiscount (10%) -Rs.64.80\nTOTAL Rs.583.20\nPaid by UPI\nNo refund without receipt\nThank you, visit again!"
+  },
+  "04_screenshot_email.png": {
+    "category": "screenshot",
+    "text": "Inbox - Mail\nInbox\nSent\nDrafts\nSpam\nFrom: security@bank-alerts.example.com\nSubject: URGENT: Password Verification Required\nDear Customer,\nWe noticed a sign-in attempt from a new device on 02/05/2026.\nTo keep your account active, complete the verification at\nhttps://secure-login.example.com/verify within 24 hours.\nNever share your password or OTP with anyone.\nWarning: unverified accounts will be suspended.\nSupport: +91 91234 56789\nVerify Now"
+  },
+  "05_poster_sign.png": {
+    "category": "poster / sign",
+    "text": "MEGA SUMMER SALE\nFLAT 50% OFF\nLIMITED OFFER\nOn all electronics and home appliances\nValid till 31/05/2026\nVisit www.megamart.example.in\nCall +91 99887 76655"
+  },
+  "06_skewed_scan.png": {
+    "category": "skewed scan",
+    "text": "INTERNAL MEMO\nDate: 10 June 2026\nTo: All Department Heads\nSubject: Budget Approval Deadline\nThe revised budget has been approved by the finance\ncommittee. All department heads must submit their final\nexpense reports before the deadline of 25/06/2026.\nLate submissions will not be processed for payment.\nContact finance@nimbus-supplies.example.com for help.\nReference: BILL-2026-0932"
+  },
+  "07_low_quality_scan.jpg": {
+    "category": "low-quality scan",
+    "text": "PAYMENT RECEIPT\nReceipt No: RCPT-55120\nDate: 22/06/2026\nReceived from: Kavya Iyer\nAmount: Rs. 12,450.00\nMode: Bank Transfer\nAccount Number: 30214567890\nPurpose: Annual maintenance charges\nAuthorised Signature\nThis is a computer generated receipt."
+  },
+  "08_low_contrast_notice.tiff": {
+    "category": "low-contrast photo",
+    "text": "NOTICE\nWarning: Restricted Area\nOnly approved personnel may enter beyond this point.\nVisitors must register at the reception desk\nand carry a valid ID card at all times.\nEmergency contact: +91 90000 12345\nIssued on 01/07/2026 by the Facilities Team"
+  },
+  "09_id_card.bmp": {
+    "category": "ID card",
+    "text": "STUDENT IDENTITY CARD\nNimbus Institute of Technology\nName: Ananya Rao\nDate of Birth: 12/08/2004\nRoll No: NIT-2023-0456\nCourse: B.Tech Computer Science\nValid Till: 31/07/2027\nEmail: ananya.rao@nimbus-institute.example.edu\nAddress: 7 Park Street, Kolkata 700016\nSignature\nSPECIMEN - NOT A REAL DOCUMENT"
+  },
+  "10_small_font_form.png": {
+    "category": "small-font form",
+    "text": "Customer Feedback Form\nCustomer Name: Rohan Gupta Phone: +91 98111 22334\nOrder Reference: INV-2026-0388 Order Date: 2026-07-15\nFeedback: The parcel was addressed correctly but arrived late.\nPayments were invoiced twice; the totals did not match.\nRequest: refund of the duplicate amount of $49.99 via card.\nDiscounts promised in the email were not applied.\nApproved for review\nRejected\nSigned: R. Gupta"
+  }
+}

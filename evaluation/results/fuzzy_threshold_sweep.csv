@@ -1,0 +1,78 @@
+config,threshold,tp,fp,fn,precision,recall,f1
+Tesseract - no preprocessing,50,53,56,0,0.4862,1.0,0.6543
+Tesseract - no preprocessing,55,53,29,0,0.6463,1.0,0.7852
+Tesseract - no preprocessing,60,53,22,0,0.7067,1.0,0.8281
+Tesseract - no preprocessing,65,53,7,0,0.8833,1.0,0.9381
+Tesseract - no preprocessing,70,53,6,0,0.8983,1.0,0.9464
+Tesseract - no preprocessing,75,53,6,0,0.8983,1.0,0.9464
+Tesseract - no preprocessing,80,53,4,0,0.9298,1.0,0.9636
+Tesseract - no preprocessing,85,53,3,0,0.9464,1.0,0.9725
+Tesseract - no preprocessing,90,53,0,0,1.0,1.0,1.0
+Tesseract - no preprocessing,95,52,0,1,1.0,0.9811,0.9905
+Tesseract - no preprocessing,100,52,0,1,1.0,0.9811,0.9905
+Tesseract - grayscale + deskew,50,53,55,0,0.4907,1.0,0.6584
+Tesseract - grayscale + deskew,55,53,29,0,0.6463,1.0,0.7852
+Tesseract - grayscale + deskew,60,53,22,0,0.7067,1.0,0.8281
+Tesseract - grayscale + deskew,65,53,7,0,0.8833,1.0,0.9381
+Tesseract - grayscale + deskew,70,53,6,0,0.8983,1.0,0.9464
+Tesseract - grayscale + deskew,75,53,6,0,0.8983,1.0,0.9464
+Tesseract - grayscale + deskew,80,53,4,0,0.9298,1.0,0.9636
+Tesseract - grayscale + deskew,85,53,3,0,0.9464,1.0,0.9725
+Tesseract - grayscale + deskew,90,53,0,0,1.0,1.0,1.0
+Tesseract - grayscale + deskew,95,52,0,1,1.0,0.9811,0.9905
+Tesseract - grayscale + deskew,100,52,0,1,1.0,0.9811,0.9905
+Tesseract - full + Otsu,50,52,54,1,0.4906,0.9811,0.6541
+Tesseract - full + Otsu,55,52,26,1,0.6667,0.9811,0.7939
+Tesseract - full + Otsu,60,52,16,1,0.7647,0.9811,0.8595
+Tesseract - full + Otsu,65,52,6,1,0.8966,0.9811,0.9369
+Tesseract - full + Otsu,70,52,5,1,0.9123,0.9811,0.9455
+Tesseract - full + Otsu,75,52,4,1,0.9286,0.9811,0.9541
+Tesseract - full + Otsu,80,50,1,3,0.9804,0.9434,0.9615
+Tesseract - full + Otsu,85,50,1,3,0.9804,0.9434,0.9615
+Tesseract - full + Otsu,90,49,0,4,1.0,0.9245,0.9608
+Tesseract - full + Otsu,95,48,0,5,1.0,0.9057,0.9505
+Tesseract - full + Otsu,100,48,0,5,1.0,0.9057,0.9505
+Tesseract - full + adaptive,50,53,55,0,0.4907,1.0,0.6584
+Tesseract - full + adaptive,55,53,30,0,0.6386,1.0,0.7794
+Tesseract - full + adaptive,60,53,22,0,0.7067,1.0,0.8281
+Tesseract - full + adaptive,65,53,7,0,0.8833,1.0,0.9381
+Tesseract - full + adaptive,70,53,5,0,0.9138,1.0,0.955
+Tesseract - full + adaptive,75,52,5,1,0.9123,0.9811,0.9455
+Tesseract - full + adaptive,80,51,3,2,0.9444,0.9623,0.9533
+Tesseract - full + adaptive,85,51,2,2,0.9623,0.9623,0.9623
+Tesseract - full + adaptive,90,50,0,3,1.0,0.9434,0.9709
+Tesseract - full + adaptive,95,50,0,3,1.0,0.9434,0.9709
+Tesseract - full + adaptive,100,50,0,3,1.0,0.9434,0.9709
+Proposed pipeline (Tesseract),50,53,58,0,0.4775,1.0,0.6463
+Proposed pipeline (Tesseract),55,53,30,0,0.6386,1.0,0.7794
+Proposed pipeline (Tesseract),60,53,22,0,0.7067,1.0,0.8281
+Proposed pipeline (Tesseract),65,53,7,0,0.8833,1.0,0.9381
+Proposed pipeline (Tesseract),70,53,6,0,0.8983,1.0,0.9464
+Proposed pipeline (Tesseract),75,53,6,0,0.8983,1.0,0.9464
+Proposed pipeline (Tesseract),80,53,4,0,0.9298,1.0,0.9636
+Proposed pipeline (Tesseract),85,53,3,0,0.9464,1.0,0.9725
+Proposed pipeline (Tesseract),90,53,0,0,1.0,1.0,1.0
+Proposed pipeline (Tesseract),95,52,0,1,1.0,0.9811,0.9905
+Proposed pipeline (Tesseract),100,52,0,1,1.0,0.9811,0.9905
+EasyOCR - no preprocessing,50,53,57,0,0.4818,1.0,0.6503
+EasyOCR - no preprocessing,55,53,29,0,0.6463,1.0,0.7852
+EasyOCR - no preprocessing,60,52,20,1,0.7222,0.9811,0.832
+EasyOCR - no preprocessing,65,52,7,1,0.8814,0.9811,0.9286
+EasyOCR - no preprocessing,70,51,6,2,0.8947,0.9623,0.9273
+EasyOCR - no preprocessing,75,50,6,3,0.8929,0.9434,0.9174
+EasyOCR - no preprocessing,80,50,4,3,0.9259,0.9434,0.9346
+EasyOCR - no preprocessing,85,49,3,4,0.9423,0.9245,0.9333
+EasyOCR - no preprocessing,90,49,0,4,1.0,0.9245,0.9608
+EasyOCR - no preprocessing,95,49,0,4,1.0,0.9245,0.9608
+EasyOCR - no preprocessing,100,49,0,4,1.0,0.9245,0.9608
+EasyOCR - grayscale + deskew,50,53,57,0,0.4818,1.0,0.6503
+EasyOCR - grayscale + deskew,55,53,29,0,0.6463,1.0,0.7852
+EasyOCR - grayscale + deskew,60,52,20,1,0.7222,0.9811,0.832
+EasyOCR - grayscale + deskew,65,52,7,1,0.8814,0.9811,0.9286
+EasyOCR - grayscale + deskew,70,51,6,2,0.8947,0.9623,0.9273
+EasyOCR - grayscale + deskew,75,50,6,3,0.8929,0.9434,0.9174
+EasyOCR - grayscale + deskew,80,50,4,3,0.9259,0.9434,0.9346
+EasyOCR - grayscale + deskew,85,49,3,4,0.9423,0.9245,0.9333
+EasyOCR - grayscale + deskew,90,49,0,4,1.0,0.9245,0.9608
+EasyOCR - grayscale + deskew,95,49,0,4,1.0,0.9245,0.9608
+EasyOCR - grayscale + deskew,100,49,0,4,1.0,0.9245,0.9608
