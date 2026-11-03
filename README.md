@@ -11,7 +11,7 @@
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![Tests](https://img.shields.io/badge/unit%20tests-53%20passing-2ea44f)
 
-**[Live app](https://image-to-text-pattern-matching.streamlit.app)** · [How it works](#how-it-works-the-six-stages) · [Results](#evaluation-results) · [Run locally](#run-it-locally) · [FAQ](#faq-questions-you-may-be-asked)
+**[Live app](https://huggingface.co/spaces/amartya1056/MPPM)** · [How it works](#how-it-works-the-six-stages) · [Results](#evaluation-results) · [Run locally](#run-it-locally) · [FAQ](#faq-questions-you-may-be-asked)
 
 <img src="docs/images/ui_matches.png" alt="Web interface showing an invoice with colour-coded matches" width="900">
 
@@ -63,16 +63,16 @@ Every match is traced back to its words, so it is drawn as a **colour-coded box 
 
 ## Try it online
 
-**Live app: [image-to-text-pattern-matching.streamlit.app](https://image-to-text-pattern-matching.streamlit.app)** (no installation needed)
+**Live app: [huggingface.co/spaces/amartya1056/MPPM](https://huggingface.co/spaces/amartya1056/MPPM)** (no installation needed)
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://image-to-text-pattern-matching.streamlit.app)
+[![Open in Hugging Face Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg)](https://huggingface.co/spaces/amartya1056/MPPM)
 
-1. Choose **Upload an image** (PNG, JPG, JPEG, BMP, TIFF) or **Use a sample image** in the sidebar.
-2. Toggle preprocessing steps and watch the result change. Results are cached, so switching back is instant.
-3. Edit the keyword list or upload your own `keywords.json` / `.yaml`.
+1. Upload an image (PNG, JPG, JPEG, BMP, TIFF) or click one of the sample images.
+2. Choose the preprocessing steps, the OCR engine (**Tesseract** or **EasyOCR**) and the matching modes, then press **Find matches**.
+3. Edit the keyword list or upload your own `keywords.json` / `.yaml` under *Keywords and patterns*.
 4. Explore the tabs: **Matches** (annotated image + table), **Extracted text** (highlighted), **Preprocessing** (every intermediate image), **Download results** (JSON / CSV / PNG).
 
-> The online version runs Tesseract. EasyOCR (PyTorch-based) is available when you run the project locally, because the free cloud tier has a 1 GB memory limit.
+> The hosted demo uses the Gradio interface [`app_gradio.py`](app_gradio.py) on a free Hugging Face Space. The richer Streamlit interface [`app.py`](app.py) runs locally. Both call the same `ocrmatch` pipeline.
 
 ---
 
@@ -541,7 +541,9 @@ The gain comes from removing noise tokens and rejoining `finance @nimbus-supplie
 
 ```
 image-to-text-pattern-matching/
-├── app.py                     Streamlit web UI
+├── app.py                     Streamlit web UI (local)
+├── app_gradio.py              Gradio web UI (hosted on Hugging Face Spaces)
+├── Dockerfile                 container image with Tesseract + EasyOCR
 ├── cli.py                     command-line interface
 ├── run_ui.bat                 starts the web UI on Windows
 ├── requirements.txt           core dependencies (used by the cloud deployment)
@@ -623,12 +625,22 @@ GitHub Actions runs the tests and a CLI smoke test on every push.
 
 ## Deployment
 
-The web UI is deployed on **Streamlit Community Cloud**:
+**Hugging Face Spaces (live demo).** The [Space](https://huggingface.co/spaces/amartya1056/MPPM) runs [`app_gradio.py`](app_gradio.py) on the free Gradio SDK:
 
-* `requirements.txt` → Python packages; `packages.txt` → `apt` installs **tesseract-ocr** on the server.
-* Main file `app.py`, branch `main`. Any push to `main` redeploys automatically.
+* `packages.txt` makes the Space `apt install` **tesseract-ocr**; the Space's `requirements.txt` adds `easyocr`.
+* On ZeroGPU hardware, EasyOCR borrows a GPU only while it runs (`@spaces.GPU`); Tesseract runs on the CPU.
+* The Space's README starts with a YAML header (`sdk: gradio`, `app_file: app_gradio.py`) and images are stored with Git LFS.
 
-To deploy your own copy: fork the repo → [share.streamlit.io](https://share.streamlit.io) → **Create app** → pick the repo, branch `main`, file `app.py` → **Deploy**.
+**Docker (any server).**
+
+```bash
+docker build -t ocrmatch .
+docker run -p 7860:7860 ocrmatch      # Streamlit UI on http://localhost:7860
+```
+
+The image installs Tesseract, CPU-only PyTorch and EasyOCR, and pre-downloads the EasyOCR models.
+
+**Streamlit Community Cloud.** `requirements.txt` + `packages.txt` are also ready for [share.streamlit.io](https://share.streamlit.io) (main file `app.py`).
 
 ---
 

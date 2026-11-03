@@ -87,14 +87,26 @@ def easyocr_available() -> bool:
         return False
 
 
+def _cuda_available() -> bool:
+    try:
+        import torch
+
+        return bool(torch.cuda.is_available())
+    except Exception:
+        return False
+
+
 def _get_easyocr_reader(langs: tuple[str, ...]):
-    if langs not in _easyocr_readers:
+    """One reader per language set; uses the GPU when one is available."""
+    gpu = _cuda_available()
+    key = langs + (("gpu",) if gpu else ())
+    if key not in _easyocr_readers:
         try:
             import easyocr
         except ImportError as exc:
             raise OCRError("EasyOCR is not installed: pip install easyocr") from exc
-        _easyocr_readers[langs] = easyocr.Reader(list(langs), gpu=False, verbose=False)
-    return _easyocr_readers[langs]
+        _easyocr_readers[key] = easyocr.Reader(list(langs), gpu=gpu, verbose=False)
+    return _easyocr_readers[key]
 
 
 def run_easyocr(image: np.ndarray, langs: tuple[str, ...] = ("en",)) -> list[OCRWord]:
