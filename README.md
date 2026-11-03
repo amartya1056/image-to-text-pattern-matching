@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔎 Image-to-Text Pattern Matching Pipeline
+# Image-to-Text Pattern Matching Pipeline
 
 **Read the text in any document image and find the keywords, phrases and values you care about,<br>even when the OCR gets a few letters wrong.**
 
@@ -11,7 +11,7 @@
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![Tests](https://img.shields.io/badge/unit%20tests-53%20passing-2ea44f)
 
-**[▶ Live app](https://image-to-text-pattern-matching.streamlit.app)** · [How it works](#-how-it-works-the-six-stages) · [Results](#-evaluation-results) · [Run locally](#-run-it-locally) · [FAQ](#-faq-questions-you-may-be-asked)
+**[Live app](https://image-to-text-pattern-matching.streamlit.app)** · [How it works](#how-it-works-the-six-stages) · [Results](#evaluation-results) · [Run locally](#run-it-locally) · [FAQ](#faq-questions-you-may-be-asked)
 
 <img src="docs/images/ui_matches.png" alt="Web interface showing an invoice with colour-coded matches" width="900">
 
@@ -21,30 +21,30 @@
 
 ## Table of contents
 
-1. [What this project does](#-what-this-project-does)
-2. [Try it online](#-try-it-online)
-3. [Key results at a glance](#-key-results-at-a-glance)
-4. [Architecture](#-architecture)
-5. [How it works: the six stages](#-how-it-works-the-six-stages)
-6. [Data structures that flow through the pipeline](#-data-structures-that-flow-through-the-pipeline)
-7. [The decision point: detecting a bad OCR pass](#-the-decision-point-detecting-a-bad-ocr-pass)
-8. [Configuration](#-configuration)
-9. [Interfaces: CLI and web UI](#-interfaces)
-10. [Outputs: annotated image, JSON, CSV](#-outputs)
-11. [Evaluation methodology and results](#-evaluation-results)
-12. [Design decisions and trade-offs](#-design-decisions-and-trade-offs)
-13. [Limitations and future work](#-limitations-and-future-work)
-14. [Project structure](#-project-structure)
-15. [Run it locally](#-run-it-locally)
-16. [Testing](#-testing)
-17. [Deployment](#-deployment)
-18. [Troubleshooting](#-troubleshooting)
-19. [FAQ: questions you may be asked](#-faq-questions-you-may-be-asked)
-20. [References](#-references)
+1. [What this project does](#what-this-project-does)
+2. [Try it online](#try-it-online)
+3. [Key results at a glance](#key-results-at-a-glance)
+4. [Architecture](#architecture)
+5. [How it works: the six stages](#how-it-works-the-six-stages)
+6. [Data structures that flow through the pipeline](#data-structures-that-flow-through-the-pipeline)
+7. [The decision point: detecting a bad OCR pass](#the-decision-point-detecting-a-bad-ocr-pass)
+8. [Configuration](#configuration)
+9. [Interfaces: CLI and web UI](#interfaces)
+10. [Outputs: annotated image, JSON, CSV](#outputs)
+11. [Evaluation methodology and results](#evaluation-results)
+12. [Design decisions and trade-offs](#design-decisions-and-trade-offs)
+13. [Limitations and future work](#limitations-and-future-work)
+14. [Project structure](#project-structure)
+15. [Run it locally](#run-it-locally)
+16. [Testing](#testing)
+17. [Deployment](#deployment)
+18. [Troubleshooting](#troubleshooting)
+19. [FAQ: questions you may be asked](#faq-questions-you-may-be-asked)
+20. [References](#references)
 
 ---
 
-## 📌 What this project does
+## What this project does
 
 > **Problem statement:** *Create a pipeline that extracts textual information from an image and applies pattern matching to locate predefined keywords or phrases.*
 
@@ -61,7 +61,7 @@ Every match is traced back to its words, so it is drawn as a **colour-coded box 
 
 ---
 
-## 🌐 Try it online
+## Try it online
 
 **Live app: [image-to-text-pattern-matching.streamlit.app](https://image-to-text-pattern-matching.streamlit.app)** (no installation needed)
 
@@ -76,14 +76,14 @@ Every match is traced back to its words, so it is drawn as a **colour-coded box 
 
 ---
 
-## 🏆 Key results at a glance
+## Key results at a glance
 
 Measured by [`evaluation/evaluate.py`](evaluation/evaluate.py) on 10 labelled test images (10 different document types, each with exact ground truth):
 
 | Configuration | Character accuracy | Word accuracy | Keyword F1 | Regex F1 | Time / image |
 |---|:-:|:-:|:-:|:-:|:-:|
 | Tesseract on raw images | 86.5 % | 82.3 % | 1.000 | 0.882 | 0.31 s |
-| Tesseract + full chain with Otsu | 87.9 % | 71.0 % ⚠️ | 0.961 | 0.695 | 0.31 s |
+| Tesseract + full chain with Otsu | 87.9 % | 71.0 %  | 0.961 | 0.695 | 0.31 s |
 | EasyOCR, grayscale + deskew | 93.9 % | 78.2 % | 0.961 | 0.714 | 3.19 s |
 | **This pipeline (final)** | **95.8 %** | **93.7 %** | **1.000** | **0.943** | **0.38 s** |
 
@@ -91,24 +91,24 @@ Measured by [`evaluation/evaluate.py`](evaluation/evaluate.py) on 10 labelled te
 
 **Three findings that shaped the design:**
 
-* 🧪 **More preprocessing is not always better.** Forcing Otsu binarisation on every image **dropped word accuracy to 71 %**, because Tesseract already binarises internally and a second hard threshold destroys anti-aliased edges. The pipeline uses light preprocessing by default and heavy preprocessing only when needed.
-* 🕵️ **Confidence cannot reveal missed text.** On a low-contrast notice, Tesseract read 11 of 40 words, *each with high confidence* (mean 87.6). A new **text-coverage** check catches this and retries automatically, raising that image from **31 % → 97 %** character accuracy.
-* 🎯 **Fuzzy matching needs a measured threshold.** At 50 it found every keyword but produced 58 false matches; at **90** it reached **precision = recall = 1.000** on the test set.
+* **More preprocessing is not always better.** Forcing Otsu binarisation on every image **dropped word accuracy to 71 %**, because Tesseract already binarises internally and a second hard threshold destroys anti-aliased edges. The pipeline uses light preprocessing by default and heavy preprocessing only when needed.
+* **Confidence cannot reveal missed text.** On a low-contrast notice, Tesseract read 11 of 40 words, *each with high confidence* (mean 87.6). A new **text-coverage** check catches this and retries automatically, raising that image from **31 % → 97 %** character accuracy.
+* **Fuzzy matching needs a measured threshold.** At 50 it found every keyword but produced 58 false matches; at **90** it reached **precision = recall = 1.000** on the test set.
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 ### High-level view
 
 ```mermaid
 flowchart LR
-    A["🖼️ Input<br/>file / folder<br/>type + decode check"] --> B["🧹 Preprocessing<br/>grayscale · CLAHE · blur<br/>deskew · Otsu / adaptive"]
-    B --> C["🔤 OCR<br/>Tesseract (LSTM)<br/>or EasyOCR"]
-    C --> D["✏️ Text cleaning<br/>punctuation · noise<br/>0/O 1/l 5/S · e-mail rejoin"]
-    D --> E["🎯 Pattern matching<br/>exact · regex · fuzzy"]
-    E --> F["📦 Output<br/>annotated image<br/>JSON · CSV · summary"]
-    K[("⚙️ config/keywords.json<br/>keywords · phrases<br/>regexes · thresholds")] -.-> E
+    A["Input<br/>file / folder<br/>type + decode check"] --> B["Preprocessing<br/>grayscale · CLAHE · blur<br/>deskew · Otsu / adaptive"]
+    B --> C["OCR<br/>Tesseract (LSTM)<br/>or EasyOCR"]
+    C --> D["Text cleaning<br/>punctuation · noise<br/>0/O 1/l 5/S · e-mail rejoin"]
+    D --> E["Pattern matching<br/>exact · regex · fuzzy"]
+    E --> F["Output<br/>annotated image<br/>JSON · CSV · summary"]
+    K[("config/keywords.json<br/>keywords · phrases<br/>regexes · thresholds")] -.-> E
 ```
 
 <details>
@@ -159,7 +159,7 @@ flowchart TB
 
 ---
 
-## ⚙ How it works: the six stages
+## How it works: the six stages
 
 ### Stage 1: Input ([`ocrmatch/io_utils.py`](ocrmatch/io_utils.py))
 
@@ -225,9 +225,9 @@ Works **word by word**, so each word keeps its box:
 
 | Mode | How | Strength | Weakness |
 |---|---|---|---|
-| 🟩 **Exact** | `(?<!\w)` + escaped words joined by `\s+` + `(?!\w)`, case-insensitive | Precision 1.000: never a false hit | One OCR error makes the keyword invisible |
-| 🟦 **Regex** | 8 patterns from the config, compiled once, run on the whole text | Extracts structured values that span several words (`Rs. 1,250.00`) | Cannot detect a *valid-looking* wrong value (`50%` read as `90%`) |
-| 🟧 **Fuzzy** | Levenshtein similarity between the keyword and word windows | Recovers OCR errors (`Bank Transter` → `bank transfer`, 92) | Threshold trade-off: near-miss words (`invoiced`, `totals`) |
+| **Exact** | `(?<!\w)` + escaped words joined by `\s+` + `(?!\w)`, case-insensitive | Precision 1.000: never a false hit | One OCR error makes the keyword invisible |
+| **Regex** | 8 patterns from the config, compiled once, run on the whole text | Extracts structured values that span several words (`Rs. 1,250.00`) | Cannot detect a *valid-looking* wrong value (`50%` read as `90%`) |
+| **Fuzzy** | Levenshtein similarity between the keyword and word windows | Recovers OCR errors (`Bank Transter` → `bank transfer`, 92) | Threshold trade-off: near-miss words (`invoiced`, `totals`) |
 
 **Levenshtein similarity.** The edit distance `d(a,b)` is the minimum number of single-character insertions, deletions and substitutions (Wagner–Fischer DP:
 `D[i][j] = min(D[i−1][j]+1, D[i][j−1]+1, D[i−1][j−1]+[aᵢ≠bⱼ])`). It is turned into a percentage:
@@ -263,7 +263,7 @@ for each keyword t with len(t) >= 4:                 # short words cause false h
 
 ---
 
-## 🧱 Data structures that flow through the pipeline
+## Data structures that flow through the pipeline
 
 ```mermaid
 flowchart LR
@@ -285,7 +285,7 @@ flowchart LR
 
 ---
 
-## 🚦 The decision point: detecting a bad OCR pass
+## The decision point: detecting a bad OCR pass
 
 <img src="docs/images/flowchart.png" alt="Operational flowchart" align="right" width="330">
 
@@ -314,7 +314,7 @@ Running the retry **only when a check fails** matters: if the heavy profile were
 
 ---
 
-## 🛠 Configuration
+## Configuration
 
 Everything the matcher looks for lives in [`config/keywords.json`](config/keywords.json) (YAML also works). **No keyword is hard-coded.**
 
@@ -351,7 +351,7 @@ Invalid regexes are rejected at load time with a clear `ConfigError`. In the web
 
 ---
 
-## 🖥 Interfaces
+## Interfaces
 
 ### Command line ([`cli.py`](cli.py))
 
@@ -396,7 +396,7 @@ python cli.py --help
 
 ---
 
-## 📦 Outputs
+## Outputs
 
 **`outputs/json/<image>.json`** (one per image; excerpt from the real output for `02_invoice.png`):
 
@@ -432,7 +432,7 @@ python cli.py --help
 
 ---
 
-## 📊 Evaluation results
+## Evaluation results
 
 ### Test set
 
@@ -507,7 +507,7 @@ The gain comes from removing noise tokens and rejoining `finance @nimbus-supplie
 
 ---
 
-## 🧭 Design decisions and trade-offs
+## Design decisions and trade-offs
 
 | Decision | Why | Alternative considered |
 |---|---|---|
@@ -523,7 +523,7 @@ The gain comes from removing noise tokens and rejoining `finance @nimbus-supplie
 
 ---
 
-## 🚧 Limitations and future work
+## Limitations and future work
 
 **Limitations (stated honestly):**
 
@@ -537,7 +537,7 @@ The gain comes from removing noise tokens and rejoining `finance @nimbus-supplie
 
 ---
 
-## 🗂 Project structure
+## Project structure
 
 ```
 image-to-text-pattern-matching/
@@ -573,7 +573,7 @@ image-to-text-pattern-matching/
 
 ---
 
-## 💻 Run it locally
+## Run it locally
 
 **1. Install the Tesseract binary** (`pytesseract` is only a wrapper):
 
@@ -605,7 +605,7 @@ python cli.py --input data/samples       # batch run -> outputs/
 
 ---
 
-## ✅ Testing
+## Testing
 
 ```bash
 python -m pytest -v
@@ -621,7 +621,7 @@ GitHub Actions runs the tests and a CLI smoke test on every push.
 
 ---
 
-## ☁ Deployment
+## Deployment
 
 The web UI is deployed on **Streamlit Community Cloud**:
 
@@ -632,7 +632,7 @@ To deploy your own copy: fork the repo → [share.streamlit.io](https://share.st
 
 ---
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 | Symptom | Fix |
 |---|---|
@@ -646,7 +646,7 @@ To deploy your own copy: fork the repo → [share.streamlit.io](https://share.st
 
 ---
 
-## ❓ FAQ: questions you may be asked
+## FAQ: questions you may be asked
 
 <details>
 <summary><b>What is OCR, and how does Tesseract work?</b></summary>
@@ -752,7 +752,7 @@ The stages are stateless, so images can be processed in parallel (process pool o
 
 ---
 
-## 📚 References
+## References
 
 1. R. Smith, "An overview of the Tesseract OCR engine," *ICDAR*, 2007, pp. 629–633.
 2. B. Shi, X. Bai, C. Yao, "An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition," *IEEE TPAMI*, 39(11), 2017.
