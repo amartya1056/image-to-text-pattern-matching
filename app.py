@@ -167,7 +167,8 @@ with st.sidebar:
     engine = st.radio("Engine", engines, horizontal=True, label_visibility="collapsed",
                       format_func=lambda e: {"tesseract": "Tesseract", "easyocr": "EasyOCR"}[e])
     if len(engines) == 1:
-        st.caption("Install EasyOCR (`pip install easyocr`) to compare a second engine.")
+        st.caption("A second engine, EasyOCR, is available when the app runs locally "
+                   "(`pip install -r requirements-easyocr.txt`).")
     auto_retry = st.checkbox("Retry with stronger preprocessing when the result looks poor", True)
 
     st.markdown("### Matching")

@@ -11,7 +11,7 @@
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![Tests](https://img.shields.io/badge/unit%20tests-53%20passing-2ea44f)
 
-**[▶ Live app](#-try-it-online)** · [How it works](#-how-it-works-the-six-stages) · [Results](#-evaluation-results) · [Run locally](#-run-it-locally) · [FAQ](#-faq-questions-you-may-be-asked)
+**[▶ Live app](https://image-to-text-pattern-matching.streamlit.app)** · [How it works](#-how-it-works-the-six-stages) · [Results](#-evaluation-results) · [Run locally](#-run-it-locally) · [FAQ](#-faq-questions-you-may-be-asked)
 
 <img src="docs/images/ui_matches.png" alt="Web interface showing an invoice with colour-coded matches" width="900">
 
@@ -63,7 +63,9 @@ Every match is traced back to its words, so it is drawn as a **colour-coded box 
 
 ## 🌐 Try it online
 
-**Live app:** _link added after deployment_
+**Live app: [image-to-text-pattern-matching.streamlit.app](https://image-to-text-pattern-matching.streamlit.app)** (no installation needed)
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://image-to-text-pattern-matching.streamlit.app)
 
 1. Choose **Upload an image** (PNG, JPG, JPEG, BMP, TIFF) or **Use a sample image** in the sidebar.
 2. Toggle preprocessing steps and watch the result change. Results are cached, so switching back is instant.
